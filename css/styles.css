@@ -2,6 +2,7 @@
 :root {
 	--mainColor: #2196f3;
 	--alterColor: #1787e0;
+  --sectionBgColor: #ececec;
 	--mainDuration: 0.3s;
 }
 /* End Variables */
@@ -469,7 +470,7 @@ section.articles .section-container .article .article-more i {
 /* End Articles Section */
 /* Start Gallery Section */
 section.gallery {
-	background-color: #ececec;
+	background-color: var(--sectionBgColor);
 }
 section.gallery .section-container {
 	display: grid;
@@ -486,10 +487,6 @@ section.gallery .section-container .gallery-pic {
 section.gallery .section-container .gallery-pic::before {
 	content: "";
 	position: absolute;
-	/* width: 0;
-	height: 0;
-  opacity: 0; */
-	/* border-radius: 50%; */
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -672,3 +669,51 @@ section.features .section-container .feature:hover .feature-more a::before {
 	width: 100%;
 }
 /* End Features Section */
+/* Start testimonials Section */
+section.testimonials {
+  background-color: var(--sectionBgColor);
+}
+section.testimonials .section-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 110px;
+}
+section.testimonials .section-container .box {
+  position: relative;
+  background-color: white;
+  border-radius: 6px;
+  padding: 20px;
+}
+section.testimonials .section-container .box img {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid var(--sectionBgColor);
+}
+section.testimonials .section-container .box * {
+  margin-bottom: 10px;
+}
+section.testimonials .section-container .box h3 {
+  
+}
+section.testimonials .section-container .box span {
+  color: #777;
+  display: block;
+}
+section.testimonials .section-container .box .rate {
+  margin-bottom: 0;
+
+}
+section.testimonials .section-container .box .rate i.filled {
+  color: #ffc107;
+}
+section.testimonials .section-container .box p {
+  color: #777;
+  line-height: 1.8;
+}
+/* End testimonials Section */
