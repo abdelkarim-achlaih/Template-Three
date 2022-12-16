@@ -864,4 +864,109 @@ section.members .container .section-container .member .member-info p {
 }
 /* End Members Section */
 /* Start Services Section */
+section.services {
+	background-color: var(--sectionBgColor);
+}
+section.services .container {
+}
+section.services .container .section-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 40px;
+}
+section.services .container .section-container .service {
+	background-color: white;
+	position: relative;
+	box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+	transition: var(--mainDuration) ease-in-out;
+	counter-increment: counter;
+}
+section.services .container .section-container .service:hover {
+	transform: translateY(-15px);
+}
+section.services .container .section-container .service::before,
+section.services .container .section-container .service::after {
+	content: "";
+	position: absolute;
+	top: -3px;
+	width: 0;
+	height: 3px;
+	background-color: var(--mainColor);
+	transition: var(--mainDuration) ease-in-out;
+}
+section.services .container .section-container .service::before {
+	left: 50%;
+}
+section.services .container .section-container .service::after {
+	right: 50%;
+}
+section.services .container .section-container .service:hover::before {
+	width: 50%;
+}
+section.services .container .section-container .service:hover::after {
+	width: 50%;
+}
+section.services .container .section-container .service .service-name {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+section.services .container .section-container .service .service-name i {
+	color: #d5d5d5;
+	margin-bottom: 20px;
+}
+section.services .container .section-container .service .service-name h3 {
+	font-size: 25px;
+	color: var(--mainColor);
+	margin-bottom: 20px;
+	text-transform: capitalize;
+}
+section.services .container .section-container .service .service-details {
+	background-color: #f9f9f9;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+}
+section.services
+	.container
+	.section-container
+	.service
+	.service-details::before {
+	content: "0" counter(counter);
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 5px 20px;
+	z-index: 1;
+}
+section.services
+	.container
+	.section-container
+	.service
+	.service-details::after {
+	content: "";
+	width: 200px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: linear-gradient(
+		to right,
+		var(--mainColor) 50%,
+		var(--mainColor) 50%,
+		#d5d5d5 50%,
+		#d5d5d5 75%,
+		#f9f9f9 75%
+	);
+	transform: skew(-30deg) translateX(-20px);
+}
+section.services .container .section-container .service .service-details a {
+	text-transform: capitalize;
+	color: var(--mainColor);
+	padding-right: 15px;
+}
 /* End Services Section */
