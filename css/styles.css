@@ -669,7 +669,7 @@ section.features .section-container .feature:hover .feature-more a::before {
 	width: 100%;
 }
 /* End Features Section */
-/* Start testimonials Section */
+/* Start Testimonials Section */
 section.testimonials {
 	background-color: var(--sectionBgColor);
 }
@@ -712,7 +712,7 @@ section.testimonials .section-container .box p {
 	color: #777;
 	line-height: 1.8;
 }
-/* End testimonials Section */
+/* End Testimonials Section */
 /* Start Members Section */
 section.members .container .section-container {
 	display: grid;
@@ -863,3 +863,5 @@ section.members .container .section-container .member .member-info p {
 	}
 }
 /* End Members Section */
+/* Start Services Section */
+/* End Services Section */
