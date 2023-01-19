@@ -1117,3 +1117,136 @@ section.steps .container .section-container .steps .step .step-content p {
 	}
 }
 /* End Steps Section */
+/* Start Events Section */
+section.events {
+	position: relative;
+}
+section.events .dots {
+	position: absolute;
+}
+section.events .dots.right {
+	top: 200px;
+	right: 0;
+}
+section.events .dots.left {
+	bottom: 140px;
+	left: 0;
+}
+section.events .container .section-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+section.events .container .section-container img {
+	max-width: 450px;
+}
+section.events .container .section-container .events-info {
+	flex-grow: 1;
+}
+section.events .container .section-container .events-info {
+	text-align: center;
+}
+section.events .container .section-container .events-info .count-down {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+section.events .container .section-container .events-info .count-down .count {
+	border: 1px solid #d4d4d4;
+	border-radius: 5px;
+	transition: var(--mainDuration);
+}
+section.events
+	.container
+	.section-container
+	.events-info
+	.count-down
+	.count:hover {
+	border-color: var(--mainColor);
+}
+section.events
+	.container
+	.section-container
+	.events-info
+	.count-down
+	.count
+	.num {
+	font-size: 35px;
+	font-weight: bold;
+	padding: 30px 20px;
+	color: var(--mainColor);
+}
+section.events
+	.container
+	.section-container
+	.events-info
+	.count-down
+	.count
+	.unit {
+	border-top: 1px solid #d4d4d4;
+	padding: 10px;
+	text-transform: capitalize;
+	font-size: 13px;
+	transition: var(--mainDuration);
+}
+section.events
+	.container
+	.section-container
+	.events-info
+	.count-down
+	.count
+	.unit:hover {
+	border-color: var(--mainColor);
+}
+section.events .container .section-container .events-info h3 {
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+section.events .container .section-container .events-info p {
+	color: #777;
+	line-height: 1.8;
+	font-size: 18px;
+}
+section.events .container .events-form {
+	max-width: fit-content;
+	background-color: #f6f5f5;
+	border-radius: 50px;
+	display: flex;
+	gap: 20px;
+	padding: 30px;
+	margin: 60px auto 0;
+}
+section.events .container .events-form input {
+	padding: 20px;
+	border-radius: 50px;
+	border: none;
+}
+section.events .container .events-form input:focus {
+	outline: none;
+}
+section.events .container .events-form input[type="text"] {
+	width: 400px;
+	caret-color: var(--mainColor);
+}
+section.events .container .events-form input[type="text"]:focus::placeholder {
+	transition: var(--mainDuration);
+}
+section.events .container .events-form input[type="text"]:focus::placeholder {
+	opacity: 0;
+}
+section.events .container .events-form input[type="submit"] {
+	color: white;
+	background-color: var(--mainColor);
+	transition: var(--mainDuration);
+	cursor: pointer;
+}
+section.events .container .events-form input[type="submit"]:hover {
+	background-color: var(--alterColor);
+}
+@media (max-width: 991px) {
+	section.events .container .section-container img {
+		display: none;
+	}
+}
+/* End Events Section */
