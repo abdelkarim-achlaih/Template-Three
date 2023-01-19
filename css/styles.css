@@ -151,7 +151,7 @@ a {
 		right: -10px;
 	}
 }
-@keyframes effect-gallery {
+@keyframes fill {
 	0% {
 		width: 0;
 		height: 0;
@@ -333,8 +333,8 @@ section.landing .container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: 80%;
 }
-
 section.landing .container .landing-text h1 {
 	font-size: 40px;
 	letter-spacing: -2px;
@@ -494,7 +494,7 @@ section.gallery .section-container .gallery-pic::before {
 	transition: var(--mainDuration);
 }
 section.gallery .section-container .gallery-pic:hover::before {
-	animation: effect-gallery calc(var(--mainDuration) * 1) forwards;
+	animation: fill calc(var(--mainDuration) * 1) forwards;
 	z-index: 100;
 }
 section.gallery .section-container .gallery-pic img {
@@ -867,8 +867,6 @@ section.members .container .section-container .member .member-info p {
 section.services {
 	background-color: var(--sectionBgColor);
 }
-section.services .container {
-}
 section.services .container .section-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -970,3 +968,152 @@ section.services .container .section-container .service .service-details a {
 	padding-right: 15px;
 }
 /* End Services Section */
+/* Start skills Section */
+section.skills .container .section-container {
+	display: flex;
+}
+section.skills .container .section-container .skills-img img {
+	width: 100%;
+}
+section.skills .container .section-container .skills {
+	flex-grow: 1;
+}
+section.skills .container .section-container .skills .skill {
+	margin-bottom: 20px;
+}
+section.skills .container .section-container .skills .skill h3 {
+	margin-bottom: 20px;
+}
+section.skills .container .section-container .skills .skill .skill-progress {
+	height: 30px;
+	position: relative;
+	background-color: #eeeeee;
+	width: 100%;
+}
+section.skills
+	.container
+	.section-container
+	.skills
+	.skill
+	.skill-progress::before {
+	content: attr(data-progress);
+	position: absolute;
+	top: -35px;
+	right: 0;
+	color: var(--mainColor);
+	font-weight: bold;
+	border: 1px solid #ccc;
+	padding: 5px;
+	font-size: 12px;
+	border-radius: 4px;
+}
+section.skills
+	.container
+	.section-container
+	.skills
+	.skill
+	.skill-progress::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background-color: var(--mainColor);
+	width: 80%;
+}
+section.skills
+	.container
+	.section-container
+	.skills
+	.skill:nth-child(2)
+	.skill-progress::after {
+	width: 85%;
+}
+section.skills
+	.container
+	.section-container
+	.skills
+	.skill:nth-child(3)
+	.skill-progress::after {
+	width: 70%;
+}
+@media (max-width: 991px) {
+	section.skills .container .section-container .skills-img img {
+		display: none;
+	}
+}
+/* End skills Section */
+/* Start Steps Section */
+section.steps {
+	background-color: var(--sectionBgColor);
+}
+section.steps .container .section-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+section.steps .container .section-container .steps-img {
+	margin-right: 100px;
+	width: 85%;
+}
+section.steps .container .section-container .steps-img img {
+	width: 100%;
+}
+section.steps .container .section-container .steps .step {
+	margin-bottom: 20px;
+	display: flex;
+	background-color: #f6f5f5;
+	padding: 30px;
+	border: 2px solid white;
+	border-radius: 10px;
+	gap: 30px;
+	position: relative;
+	overflow: hidden;
+	z-index: 3;
+}
+section.steps .container .section-container .steps .step::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	transform: translate(-50%, -50%);
+	border-radius: 10px;
+	background-color: #ededed;
+	transition: var(--mainDuration);
+	z-index: -1;
+}
+section.steps .container .section-container .steps .step:hover::before {
+	width: 100%;
+	height: 100%;
+}
+section.steps .container .section-container .steps .step .step-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section.steps .container .section-container .steps .step .step-img img {
+	width: 64px;
+}
+section.steps .container .section-container .steps .step .step-content h3 {
+	font-weight: bold;
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+section.steps .container .section-container .steps .step .step-content p {
+	line-height: 1.7;
+	color: #777;
+	font-size: 18px;
+}
+@media (max-width: 991px) {
+	section.steps .container .section-container {
+		flex-direction: column;
+	}
+	section.steps .container .section-container .steps-img {
+		margin-right: 0;
+		margin-bottom: 30px;
+		width: 100%;
+	}
+}
+/* End Steps Section */
