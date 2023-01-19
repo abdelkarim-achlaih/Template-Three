@@ -1250,3 +1250,144 @@ section.events .container .events-form input[type="submit"]:hover {
 	}
 }
 /* End Events Section */
+/* Start Plans Section */
+section.plans {
+	background-color: var(--sectionBgColor);
+	position: relative;
+}
+section.plans .dots {
+	position: absolute;
+	z-index: 0;
+}
+section.plans .dots.right {
+	top: 200px;
+	right: 0;
+}
+section.plans .dots.left {
+	bottom: 140px;
+	left: 0;
+}
+section.plans .section-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 30px;
+}
+section.plans .section-container .plan {
+	background-color: white;
+	box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	z-index: 1;
+	position: relative;
+}
+section.plans .section-container .plan::before,
+section.plans .section-container .plan::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 50%;
+	background-color: #f6f6f6;
+	transition: var(--mainDuration);
+	z-index: -1;
+}
+section.plans .section-container .plan::before {
+	top: 0;
+	left: 0;
+}
+section.plans .section-container .plan::after {
+	bottom: 0;
+	right: 0;
+}
+section.plans .section-container .plan:hover::before,
+section.plans .section-container .plan:hover::after {
+	width: 100%;
+}
+section.plans .section-container .plan.popular {
+	transform: translateY(-20px);
+}
+section.plans .section-container .plan.popular .label {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	background-color: var(--mainColor);
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	padding: 10px 10px 40px;
+	writing-mode: vertical-lr;
+	width: 40px;
+}
+section.plans .section-container .plan.popular .label::before {
+	position: absolute;
+	width: 0;
+	height: 0;
+	content: "";
+	background-color: white;
+	bottom: 0;
+	left: 0;
+	border: 20px solid var(--mainColor);
+	border-bottom-color: transparent;
+}
+section.plans .section-container .plan h3 {
+	text-transform: capitalize;
+	font-size: 25px;
+	margin-top: 30px;
+}
+section.plans .section-container .plan img {
+	width: 90px;
+}
+section.plans .section-container .plan .price {
+	font-size: 60px;
+	font-weight: bold;
+	color: var(--mainColor);
+}
+section.plans .section-container .plan .per {
+	color: #777;
+	text-transform: capitalize;
+	margin-top: -20px;
+}
+section.plans .section-container .plan ul {
+	align-self: flex-start;
+	width: 100%;
+}
+section.plans .section-container .plan ul li {
+	border-top: 1px solid #eee;
+	position: relative;
+	padding: 20px 50px;
+}
+section.plans .section-container .plan ul li::before {
+	font-family: "Font Awesome 5 Free";
+	content: "\f00c";
+	font-weight: bold;
+	font-size: 16px;
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	transform: translate(-50%, -50%);
+	color: var(--mainColor);
+}
+section.plans .section-container .plan button {
+	margin-bottom: 30px;
+	background-color: white;
+	color: var(--mainColor);
+	border: 2px solid var(--mainColor);
+	padding: 15px 20px;
+	border-radius: 5px;
+	text-transform: capitalize;
+	font-weight: bold;
+	transition: var(--mainDuration);
+	cursor: pointer;
+}
+section.plans .section-container .plan button:hover {
+	background-color: var(--mainColor);
+	color: white;
+}
+@media (max-width: 991px) {
+	section.plans .section-container .plan.popular {
+		transform: translateY(0);
+	}
+}
+/* End Plans Section */
