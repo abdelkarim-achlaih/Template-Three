@@ -1391,3 +1391,65 @@ section.plans .section-container .plan button:hover {
 	}
 }
 /* End Plans Section */
+/* Start Videos Section */
+section.videos .container .section-container {
+	display: flex;
+	border: 1px solid #ddd;
+}
+section.videos .container .section-container .playlist {
+	min-width: 300px;
+}
+section.videos .container .section-container .playlist .title {
+	background-color: #f4f4f4;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+section.videos .container .section-container .playlist .title h3 {
+	font-size: 16px;
+}
+section.videos .container .section-container .playlist .title i {
+	transition: var(--mainDuration);
+	color: var(--mainColor);
+	cursor: pointer;
+}
+section.videos .container .section-container .playlist .title i:hover {
+	color: var(--alterColor);
+}
+section.videos .container .section-container .playlist ul li {
+	padding: 20px;
+	cursor: pointer;
+	transition: var(--mainDuration);
+}
+section.videos .container .section-container .playlist ul li:hover {
+	color: var(--mainColor);
+	background-color: #fafafa;
+}
+section.videos .container .section-container .playlist ul li:not(:last-of-type) {
+	border-bottom: 1px solid #ddd;
+}
+section.videos .container .section-container .playlist ul li span {
+	display: block;
+	margin-top: 10px;
+	color: #777;
+}
+section.videos .container .section-container .preview {
+	padding: 10px;
+	background-color: #e2e2e2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+section.videos .container .section-container .preview img {
+	width: 100%;
+}
+section.videos .container .section-container .preview .preview-title {
+	background-color: white;
+	padding: 20px;
+}
+@media (max-width: 991px) {
+	section.videos .container .section-container {
+		flex-direction: column;
+	}
+}
+/* End Videos Section */
