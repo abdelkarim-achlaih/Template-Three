@@ -1359,7 +1359,7 @@ section.plans .section-container .plan.popular .label::before {
 	border-bottom-color: transparent;
 	transition: var(--mainDuration);
 }
-section.plans .section-container .plan.popular:Hover .label::before {
+section.plans .section-container .plan.popular:hover .label::before {
 	border-bottom-color: #f6f6f6;
 }
 section.plans .section-container .plan h3 {
@@ -1456,7 +1456,12 @@ section.videos .container .section-container .playlist ul li:hover {
 	color: var(--mainColor);
 	background-color: #fafafa;
 }
-section.videos .container .section-container .playlist ul li:not(:last-of-type) {
+section.videos
+	.container
+	.section-container
+	.playlist
+	ul
+	li:not(:last-of-type) {
 	border-bottom: 1px solid #ddd;
 }
 section.videos .container .section-container .playlist ul li span {
@@ -1484,3 +1489,79 @@ section.videos .container .section-container .preview .preview-title {
 	}
 }
 /* End Videos Section */
+/* Start Stats Section */
+section.stats {
+	background-color: var(--sectionBgColor);
+	position: relative;
+}
+section.stats::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/stats.jpg');
+	background-size: cover;
+	opacity: 0.05;
+}
+section.stats .container .stats-title h2 {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: capitalize;
+}
+section.stats .container .section-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 40px;
+}
+section.stats .container .section-container .stat {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	gap: 15px;
+	align-items: center;
+	opacity: 0.8;
+	transition: var(--mainDuration);
+	position: relative;
+}
+section.stats .container .section-container .stat:hover {
+	opacity: 1;
+}
+section.stats .container .section-container .stat::before,
+section.stats .container .section-container .stat::after {
+	content: "";
+	position: absolute;
+	width: 2px;
+	background-color: var(--mainColor);
+	height: 0;
+	transition: calc(var(--mainDuration) * 2);
+}
+section.stats .container .section-container .stat::before {
+	bottom: 0;
+	left: 0;
+}
+section.stats .container .section-container .stat::after {
+	top: 0;
+	right: 0;
+}
+section.stats .container .section-container .stat:hover::before,
+section.stats .container .section-container .stat:hover::after {
+	height: 100%;
+}
+section.stats .container .section-container .stat i {
+	font-size: 30px;
+}
+section.stats .container .section-container .stat span:first-of-type {
+	font-size: 50px;
+	font-weight: bold;
+}
+section.stats .container .section-container .stat span:last-of-type {
+	color: var(--mainColor);
+	font-weight: bold;
+	font-style: italic;
+	font-size: 20px;
+}
+/* End Stats Section */
