@@ -1131,6 +1131,7 @@ section.events {
 }
 section.events .dots {
 	position: absolute;
+	z-index: -1;
 }
 section.events .dots.right {
 	top: 200px;
@@ -1255,6 +1256,24 @@ section.events .container .events-form input[type="submit"]:hover {
 @media (max-width: 991px) {
 	section.events .container .section-container img {
 		display: none;
+	}
+}
+@media (max-width: 767px) {
+	section.events .container .events-form {
+		flex-direction: column;
+		padding: 20px;
+		max-width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		border-radius: 0;
+	}
+	section.events .container .events-form input {
+		padding: 10px;
+		border-radius: 0;
+	}
+	section.events .container .events-form input[type="email"] {
+		width: 100%;
+		text-align: center;
 	}
 }
 /* End Events Section */
