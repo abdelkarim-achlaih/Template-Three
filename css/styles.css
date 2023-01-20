@@ -1233,14 +1233,14 @@ section.events .container .events-form input {
 section.events .container .events-form input:focus {
 	outline: none;
 }
-section.events .container .events-form input[type="text"] {
+section.events .container .events-form input[type="email"] {
 	width: 400px;
 	caret-color: var(--mainColor);
 }
-section.events .container .events-form input[type="text"]:focus::placeholder {
+section.events .container .events-form input[type="email"]:focus::placeholder {
 	transition: var(--mainDuration);
 }
-section.events .container .events-form input[type="text"]:focus::placeholder {
+section.events .container .events-form input[type="email"]:focus::placeholder {
 	opacity: 0;
 }
 section.events .container .events-form input[type="submit"] {
