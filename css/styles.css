@@ -1116,6 +1116,14 @@ section.steps .container .section-container .steps .step .step-content p {
 		width: 100%;
 	}
 }
+@media (max-width: 767px) {
+	section.steps .container .section-container .steps .step {
+		flex-direction: column;
+	}
+	section.steps .container .section-container .steps .step .step-content {
+		text-align: center;
+	}
+}
 /* End Steps Section */
 /* Start Events Section */
 section.events {
