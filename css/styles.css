@@ -1357,6 +1357,10 @@ section.plans .section-container .plan.popular .label::before {
 	left: 0;
 	border: 20px solid var(--mainColor);
 	border-bottom-color: transparent;
+	transition: var(--mainDuration);
+}
+section.plans .section-container .plan.popular:Hover .label::before {
+	border-bottom-color: #f6f6f6;
 }
 section.plans .section-container .plan h3 {
 	text-transform: capitalize;
