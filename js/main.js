@@ -1,19 +1,31 @@
-/* Start Skills Section */
 let skillsSection = document.querySelector("section.skills");
 let skills = document.querySelectorAll(".skill-progress");
 
+let statsSection = document.querySelector("section.stats");
+let stats = document.querySelectorAll(".stat span:first-of-type");
+
 window.onscroll = function () {
-	skills.forEach((skill) => {
-		if (
-			this.scrollY >= skillsSection.offsetTop - 250 &&
-			skill.style.width === "0px"
-		) {
-			skill.style.width = skill.dataset.progress;
-		}
-	});
+	if (this.scrollY >= skillsSection.offsetTop - 250) {
+		skills.forEach((skill) => {
+			if (skill.style.width === "0px") {
+				skill.style.width = skill.dataset.progress;
+			}
+		});
+	}
+
+	if (window.scrollY >= statsSection.offsetTop - 250) {
+		stats.forEach((stat) => {
+			let numberCounter = setInterval(() => {
+				if (parseInt(stat.innerHTML) < parseInt(stat.dataset.num)) {
+					stat.innerHTML++;
+				} else {
+					clearInterval(numberCounter);
+				}
+			}, 5000 / stat.dataset.num);
+		});
+	}
 };
-/* End Skills Section */
-/* Start Events Section */
+
 let countUnits = document.querySelectorAll(".count .num");
 let deadLine = new Date("21 January 2024 23:59:59");
 
@@ -27,7 +39,7 @@ let eventCounter = setInterval(() => {
 	let seconds = (difference % (1000 * 60)) / 1000;
 	countDown.unshift(days, hours, minutes, seconds);
 	for (let i = 0; i < countUnits.length; i++) {
-		countUnits[i].innerHTML = countDown[i].toFixed(0);
+		countUnits[i].innerHTML = Math.floor(countDown[i]);
 	}
 	if (difference <= 0) {
 		clearInterval(eventCounter);
@@ -36,4 +48,3 @@ let eventCounter = setInterval(() => {
 		}
 	}
 }, 1000);
-/* End Events Section */
