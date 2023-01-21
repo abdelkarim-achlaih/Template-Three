@@ -991,7 +991,7 @@ section.services .container .section-container .service .service-details a {
 	padding-right: 15px;
 }
 /* End Services Section */
-/* Start skills Section */
+/* Start Skills Section */
 section.skills .container .section-container {
 	display: flex;
 }
@@ -1078,7 +1078,7 @@ section.skills
 		display: none;
 	}
 }
-/* End skills Section */
+/* End Skills Section */
 /* Start Steps Section */
 section.steps {
 	background-color: var(--sectionBgColor);
@@ -1198,6 +1198,7 @@ section.events .container .section-container .events-info .count-down {
 	margin-bottom: 20px;
 }
 section.events .container .section-container .events-info .count-down .count {
+	flex-basis: 100px;
 	border: 1px solid #d4d4d4;
 	border-radius: 5px;
 	transition: var(--mainDuration);
@@ -1240,8 +1241,8 @@ section.events
 	.section-container
 	.events-info
 	.count-down
-	.count
-	.unit:hover {
+	.count:hover
+	.unit {
 	border-color: var(--mainColor);
 }
 section.events .container .section-container .events-info h3 {
