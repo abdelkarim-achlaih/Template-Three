@@ -1718,7 +1718,7 @@ footer .container .social p {
 	color: #b9b9b9;
 	line-height: 1.8;
 }
-footer .container .links ul li {
+footer .container .links ul li:not(:last-child) {
 	border-bottom: 1px solid #444;
 	margin-bottom: 20px;
 }
@@ -1765,6 +1765,7 @@ footer .container .gallery {
 }
 footer .container .gallery img {
 	width: calc((100% - 40px) / 3);
+	border: white 3px solid;
 }
 @media (max-width: 767px) {
 	footer .container .social {
